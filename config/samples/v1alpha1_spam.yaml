@@ -1,0 +1,8 @@
+apiVersion: sijoma.dev/v1alpha1
+kind: Spam
+metadata:
+  labels:
+    app.kubernetes.io/name: spam-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: spam-sample
+spec:

@@ -1,0 +1,23 @@
+# permissions for end users to view spams.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: spam-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: spam-viewer-role
+rules:
+- apiGroups:
+  - sijoma.dev
+  resources:
+  - spams
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - sijoma.dev
+  resources:
+  - spams/status
+  verbs:
+  - get
